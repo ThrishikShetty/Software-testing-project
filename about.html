@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speedy Rentals-About</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* CSS for animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(-50px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    nav{
+      background-color: #f7f7f7;;
+      padding: 45px;
+    
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: rgb(58, 58, 58);
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #eee;
+    }
+
+    nav ul li a.active {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 36px;
+      color: #333;
+      text-align: center;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #007bff;
+      border-left: 5px solid #007bff;
+      padding-left: 10px;
+      animation: slideIn 1.5s ease-in-out;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .container p:nth-of-type(2) {
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .container p:nth-of-type(3) {
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .container p:nth-of-type(4) {
+      animation: fadeIn 3.5s ease-in-out;
+    }
+
+    .container p:nth-of-type(5) {
+      animation: fadeIn 4s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+
+  <div class="container">
+    <h1>About Us</h1>
+    <p>Welcome to our car rental service. We are dedicated to providing high-quality rental vehicles to our customers with a focus on convenience, reliability, and exceptional customer service.</p>
+    
+    <h2>Our Mission</h2>
+    <p>Our mission is to make transportation accessible to everyone, ensuring that individuals can conveniently rent vehicles for their needs and travel in comfort.</p>
+    
+    <h2>Our Team</h2>
+    <p>We are a team of passionate individuals with expertise in automotive services, customer service, and e-commerce. Our diverse backgrounds and skills enable us to deliver the best possible experience to our customers.</p>
+    
+    <h2>Quality Assurance</h2>
+    <p>We prioritize the quality and safety of our vehicles. All vehicles undergo rigorous quality control measures to ensure they meet industry standards and regulations.</p>
+    
+    <h2>Customer Satisfaction</h2>
+    <p>Your satisfaction is our top priority. We are committed to providing excellent customer service, flexible rental options, and hassle-free returns to ensure you have a positive experience with us.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speedy Rentals - Cars</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    h1{
+      text-align: center;
+    }
+    p{
+      text-align: center;
+    }
+    nav{
+      background-color: #f7f7f7;;
+      padding: 25px;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    
+    nav ul li a {
+      color: rgb(58, 58, 58);
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #eee;
+    }
+
+    nav ul li a.active {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .car-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .car-item {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      padding: 60px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .car-item img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .car-item h3 {
+      margin: 10px 0;
+    }
+
+    .car-item p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .car-item .price {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .car-item .rent-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      text-decoration: none; /* Remove underline from link */
+      display: inline-block; /* Ensure it behaves like a button */
+      width: 100%; /* Full width button */
+    }
+
+    .car-item .rent-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+      <ul>
+      
+        <li><a href="index.html" > Home</a></li>
+        <li><a href="about.html"> About</a></li>
+        <li><a href="contact.html"> Contact</a></li>
+        <li><a href="logout.html"> Logout</a></li>
+      </ul>
+    </nav>
+
+  
+  <div class="container">
+    <h1>SPEEDY RENTALS CARS</h1>
+    <p>Here you can browse and rent our  cars.</p>
+    <div class="car-list">
+      <div class="car-item">
+        <img src="car1.jpg" alt="Thar">
+        <h3>Thar</h3>
+        <p>Comfortable and fuel-efficient</p>
+        <p class="price">$50/day</p>
+        <a href="rent.html?car=Thar&price=50" class="rent-button">Rent Now</a>
+      </div>
+      <div class="car-item">
+        <img src="car2.jpg" alt="BMW">
+        <h3>BMW</h3>
+        <p>Spacious and powerful</p>
+        <p class="price">$70/day</p>
+        <a href="rent.html?car=BMW&price=70" class="rent-button">Rent Now</a>
+      </div>
+      <div class="car-item">
+        <img src="car3.jpg" alt="BMW 6-Series Gran Coupe">
+        <h3>BMW 6-Series Gran Coupe</h3>
+        <p>Stylish and fun</p>
+        <p class="price">$89/day</p>
+        <a href="rent.html?car=BMW%206-Series%20Gran%20Coupe&price=89" class="rent-button">Rent Now</a>
+      </div>
+      <div class="car-item">
+        <img src="fc2.png" alt="Chevrolet Camaro WMV20">
+        <h3>Chevrolet Camaro WMV20</h3>
+        <p>Perfect for families</p>
+        <p class="price">$66/day</p>
+        <a href="rent.html?car=Chevrolet%20Camaro%20WMV20&price=66" class="rent-button">Rent Now</a>
+      </div>
+      <div class="car-item">
+        <img src="fc3.png" alt="Lamborghini V520">
+        <h3>Lamborghini V520</h3>
+        <p>Comfortable and fuel-efficient</p>
+        <p class="price">$125/day</p>
+        <a href="rent.html?car=Lamborghini%20V520&price=125" class="rent-button">Rent Now</a>
+      </div>
+      <div class="car-item">
+        <img src="fc4.png" alt="Audi A3 Sedan">
+        <h3>Audi A3 Sedan</h3>
+        <p>Comfortable and fuel-efficient</p>
+        <p class="price">$95/day</p>
+        <a href="rent.html?car=Audi%20A3%20Sedan&price=95" class="rent-button">Rent Now</a>
+      </div>
+      <div class="car-item">
+        <img src="fc5.png" alt="Infiniti Z5">
+        <h3>Infiniti Z5</h3>
+        <p>Comfortable and fuel-efficient</p>
+        <p class="price">$36/day</p>
+        <a href="rent.html?car=Infiniti%20Z5&price=36" class="rent-button">Rent Now</a>
+      </div>
+      <div class="car-item">
+        <img src="fc6.png" alt="Porsche 718 Cayman">
+        <h3>Porsche 718 Cayman</h3>
+        <p>Comfortable and fuel-efficient</p>
+        <p class="price">$48/day</p>
+        <a href="rent.html?car=Porsche%20718%20Cayman&price=48" class="rent-button">Rent Now</a>
+      </div>
+      <div class="car-item">
+        <img src="fc7.png" alt="BMW 8-Series Coupe">
+        <h3>BMW 8-Series Coupe</h3>
+        <p>Comfortable and fuel-efficient</p>
+        <p class="price">$56/day</p>
+        <a href="rent.html?car=BMW%208-Series%20Coupe&price=56" class="rent-button">Rent Now</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

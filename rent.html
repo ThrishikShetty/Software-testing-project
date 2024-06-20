@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speedy Rentals - Rent Car</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .container h1 {
+      margin-bottom: 20px;
+    }
+
+    .rent-details {
+      margin-top: 30px;
+      text-align: left;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .rent-details h3 {
+      margin-bottom: 10px;
+    }
+
+    .rent-details p {
+      margin: 5px 0;
+    }
+
+    .confirm-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      text-decoration: none; /* Remove underline from link */
+      display: inline-block;
+    }
+
+    .confirm-button:hover {
+      background-color: #45a049;
+    }
+
+    .rent-days-input {
+      width: 50px;
+      text-align: center;
+    }
+    nav{
+      background-color: #f7f7f7;;
+      padding: 45px;
+      right: 1px;
+    
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: rgb(58, 58, 58);
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #eee;
+    }
+
+    nav ul li a.active {
+      background-color: #007bff;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  
+    <nav>
+      <ul>
+        <li><a href="index.html" > Home</a></li>
+        <li><a href="about.html"> About</a></li>
+        <li><a href="contact.html"> Contact</a></li>
+        <li><a href="logout.html"> Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <h1>Rent Car</h1>
+    
+    <div class="rent-details">
+      <h3>Rental Details</h3>
+      <p><strong>Car:</strong> <span id="carName"></span></p>
+      <p><strong>Price per Day:</strong> $<span id="carPrice"></span></p>
+      <p><strong>Rental Period:</strong> <input type="number" id="rentDays" class="rent-days-input" min="1" value="1"> days</p>
+      <p><strong>Total Price:</strong> $<span id="totalPrice"></span></p>
+    </div>
+
+    <a href="#" class="confirm-button" onclick="confirmRental()">Confirm Rental</a>
+  </div>
+
+  <script>
+    // Function to extract URL parameters
+    function getUrlParameter(name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      var results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    // Extract carName and carPrice from URL parameters
+    const carName = getUrlParameter('car');
+    const carPrice = parseFloat(getUrlParameter('price'));
+
+    // Display carName and carPrice in the rental details section
+    document.getElementById('carName').textContent = carName;
+    document.getElementById('carPrice').textContent = carPrice.toFixed(2);
+
+    // Function to calculate total price based on rental period
+    function calculateTotal() {
+      const rentDays = document.getElementById('rentDays').value;
+      const totalPrice = rentDays * carPrice;
+      document.getElementById('totalPrice').textContent = totalPrice.toFixed(2);
+    }
+
+    // Initial calculation on page load
+    calculateTotal();
+
+    // Recalculate total price on input change
+    document.getElementById('rentDays').addEventListener('input', calculateTotal);
+
+    // Function to confirm rental and redirect to confirmation page
+    function confirmRental() {
+      const rentDays = document.getElementById('rentDays').value;
+      const totalPrice = rentDays * carPrice;
+      // Redirect to confirmation page with parameters
+      window.location.href = `confirmation.html?car=${encodeURIComponent(carName)}&price=${encodeURIComponent(carPrice.toFixed(2))}&days=${encodeURIComponent(rentDays)}&total=${encodeURIComponent(totalPrice.toFixed(2))}`;
+    }
+  </script>
+</body>
+</html>
