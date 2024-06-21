@@ -12,6 +12,8 @@ Selenium is an open-source tool that automates web browsers. It provides a singl
 - **Framework Integration**: Integrates well with testing frameworks like pytest, unittest, and more.
 - **Extensive Documentation**: Offers extensive documentation and a supportive community.
 
+##  Website tested is : 
+https://resonant-madeleine-516425.netlify.app/
 ## Prerequisites
 
 Before you can run Selenium tests using this project, you need to set up your environment with the following tools:
